@@ -19,8 +19,8 @@ The Ethereum Validator App is built using React.js for the frontend, utilizing c
 
 ### Frontend Architecture
 
-- *React Components:* Structured components such as Navbar, Sidebar, Validator List, and Validator Details are used to organize the application's frontend.
-- *Routing:* Handled by react-router-dom to navigate between different sections of the application (Welcome, Validator List, Validator Details, About).
+- *React Components:* Structured components such as Navbar, Sidebar(Top Validator List), Validator Search and Validator Details are used to organize the application's frontend.
+- *Routing:* Handled by react-router-dom to navigate between different sections of the application (Welcome,Validator Search, Validator Details, About Top Validator List from Sidebar).
 
 ### Backend Integration
 
