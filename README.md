@@ -32,6 +32,6 @@ To run the Ethereum Validator App locally on your machine, make sure you have th
 
 ### Prerequisites
 
-- Node.js (version 12.x or higher)
+- Node.js (version 20.x or higher)
 - npm (Node Package Manager)
 - Axios (for making HTTP requests)
