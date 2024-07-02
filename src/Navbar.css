@@ -1,0 +1,38 @@
+nav {
+  grid-row: 1 / 2; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to right, #0C1A1A, #6ACFC7, #0C1A1A);
+  color: #fff;
+  padding: 8px;
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.title {
+  font-size: 24px; 
+  color: #fff;
+  padding: 0px; 
+  margin-left: 0px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px; 
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}

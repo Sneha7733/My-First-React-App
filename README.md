@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Ethereum Validator App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ethereum Validator App is a specialized application designed to provide comprehensive information about Ethereum validators fetched from Beaconcha.in, a trusted source for Ethereum blockchain data. Whether you're a validator, investor, or enthusiast, Ethereum Validator App offers valuable insights into the Ethereum Validator network.
 
-## Available Scripts
+## Key Features:
 
-In the project directory, you can run:
+1. *Validator Details:*
+   - Ethereum Validator App provides detailed information about individual Ethereum validators. This includes essential data such as validator ID, status, balance, performance metrics, information on Epoch, and withdrawals.
 
-### `npm start`
+2. *Attestations and Performance:*
+   - Users can track validator performance metrics such as the Epoch number, Attestations slot, Inclusion Slot, its Status, start, and end of those performance.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. *Top 10 Validators:*
+   - Ethereum Validator App highlights the top 10 Ethereum validators based on criteria such as stake size, efficiency, and reliability. This feature helps users identify leading validators in the network and also their information.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Architecture Overview
 
-### `npm test`
+The Ethereum Validator App is built using React.js for the frontend, utilizing components to manage UI elements and state. The application fetches data from Beaconcha.in API endpoints to populate validator information dynamically.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend Architecture
 
-### `npm run build`
+- *React Components:* Structured components such as Navbar, Sidebar, Validator List, and Validator Details are used to organize the application's frontend.
+- *Routing:* Handled by react-router-dom to navigate between different sections of the application (Welcome, Validator List, Validator Details, About).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend Integration
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- *API Integration:* Communicates with Beaconcha.in API endpoints to retrieve real-time data about Ethereum 2.0 validators and their performance metrics.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+To run the Ethereum Validator App locally on your machine, make sure you have the following prerequisites installed:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Node.js (version 12.x or higher)
+- npm (Node Package Manager)
+- Axios (for making HTTP requests)
