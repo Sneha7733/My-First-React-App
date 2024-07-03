@@ -11,11 +11,11 @@ const About = () => {
       <h2>Core Aspects Of The App:</h2>
       <ol>
       <li>
-          <strong>Validator Search:</strong> <br />
+          <strong>Validator Finder:</strong> <br />
           Ethereum Validator App provides provides an input box to give ID or pubkey of a Validator to search and give it's related information in Validator_Info page.
         </li><br />
         <li>
-          <strong>Validator IDnformation:</strong> <br />
+          <strong>Validator Information:</strong> <br />
           Ethereum Validator App provides detailed information about individual Ethereum validators. This includes essential data such as validator ID, status, balance, performance metrics, information on Epoch and withdrawals..
         </li><br />
         <li>
