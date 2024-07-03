@@ -73,7 +73,7 @@ const Validator_Info = () => {
       {validatorData && (
         <>
           <h1>Validator {validatorData.validatorIndex}</h1>
-          <p><b><center>{validatorData.pubkey}</center></b></p>
+          <p><b><center>Public Key: {validatorData.pubkey}</center></b></p>
           <h2>Validator Stats</h2>
           <div className="stats-box">
             <div className='list'>
