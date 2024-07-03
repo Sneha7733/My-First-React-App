@@ -45,8 +45,9 @@ To run the Ethereum Validator App locally on your machine, make sure you have th
 - Create react app
 - add files to respective folders
 
-   my-react-app/
+my-best-app/
 ├── public/
+│   ├── eth-icon.png
 │   ├── eth-valid.jpg
 │   ├── index.html
 ├── src/
