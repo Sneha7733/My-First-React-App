@@ -32,6 +32,7 @@ To run the Ethereum Validator App locally on your machine, make sure you have th
 
 ### Prerequisites
 
+- VS Code
 - Node.js (version 12.x or higher)
 - npm (Node Package Manager)
 - Axios (for making HTTP requests)
@@ -49,8 +50,8 @@ To run the Ethereum Validator App locally on your machine, make sure you have th
 ```plaintext
 my-react-app/
 ├── public/
-│   ├── eth-valid.jpg
-│   ├── eth-icon.jpg
+│   ├── eth-valid.jpg  (image used for Welcome Page)
+│   ├── eth-icon.jpg  (Image used as Icon For Title)
 │   └── index.html
 ├── src/
 │   ├── About.js
