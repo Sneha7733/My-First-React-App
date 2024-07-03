@@ -17,7 +17,3 @@ p {
   padding: 10px 0;
 }
 
-/* Adjustments for smaller screens */
-@media (max-width: 768px) {
-  /* Add mobile specific styles here if needed */
-}
