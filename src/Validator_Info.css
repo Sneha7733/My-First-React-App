@@ -85,15 +85,3 @@
   background-color: #b6f1ea;
 }
 
-@media (max-width: 768px) {
-  .validator-info {
-    margin-left: 0;
-    width: 100%;
-  }
-  .stats-box {
-    flex-direction: column;
-  }
-  .list {
-    width: 100%;
-  }
-}
