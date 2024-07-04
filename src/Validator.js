@@ -7,20 +7,45 @@ import './Validator.css';
 function Validator() {
   const [input, setInput] = useState('');
   const [suggestions, setSuggestions] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    const value = e.target.value;
-    setInput(value);
+    const value = e.target.value.trim(); // Trim whitespace
 
-    if (value.length > 2) {
-      axios.get(`${API_URL}/search/indexed_validators/${value}`)
-        .then(response => {
-          setSuggestions(response.data.data);
-        })
-        .catch(error => {
-          console.error('Error fetching suggestions:', error);
-        });
+    // Validate input format: only numbers and alphanumeric characters
+    if (/^[0-9a-zA-Z]*$/.test(value) || value === '') {
+      setInput(value);
+
+      if (value.length > 2) {
+        setLoading(true);
+        axios.get(`${API_URL}/search/indexed_validators/${encodeURIComponent(value)}`)
+          .then(response => {
+            if (response.data.data.length === 0) {
+              setError('No results found. Please enter a valid ID or pubkey.');
+              setSuggestions([]);
+            } else {
+              setError('');
+              setSuggestions(response.data.data);
+            }
+            setLoading(false);
+          })
+          .catch(error => {
+            console.error('Error fetching suggestions:', error);
+            setError('');
+            setSuggestions([]);
+            setLoading(false);
+          });
+      } else {
+        setSuggestions([]);
+        setError('');
+      }
+    } else {
+      setInput(value);
+      setSuggestions([]);
+      setError('Invalid input format. Please enter only numbers and alphanumeric characters.');
     }
   };
 
@@ -30,28 +55,35 @@ function Validator() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (input) {
-      navigate(`/validator/${input}`);
+    const trimmedInput = input.trim();
+
+    if (trimmedInput && /^[0-9a-zA-Z]+$/.test(trimmedInput)) {
+      navigate(`/validator/${encodeURIComponent(trimmedInput)}`);
+    } else {
+      setError('Invalid input format. Please enter only numbers and alphanumeric characters.');
     }
   };
 
   return (
-    <div className="validator"><center>
-      <h2>Validator Search</h2>
-      <p>Enter a Validator ID or Pubkey:</p>
-      <form onSubmit={handleSubmit}>
-        <input type="text" value={input} onChange={handleChange} />
-        <button type="submit">Search</button>
-      </form>
-      {suggestions.length > 0 && (
-        <ul>
-          {suggestions.map(suggestion => (
-            <li key={suggestion.id} onClick={() => handleSelect(suggestion.id)}>
-              {suggestion.id}
-            </li>
-          ))}
-        </ul>
-      )}
+    <div className="validator">
+      <center>
+        <h2>Validator Search</h2>
+        <p>Enter a Validator ID or Pubkey:</p>
+        <form onSubmit={handleSubmit}>
+          <input type="text" value={input} onChange={handleChange} />
+          <button type="submit">Search</button>
+        </form>
+        {error && <p style={{ color: 'red' }}>{error}</p>}
+        {loading && <p>Loading...</p>}
+        {suggestions.length > 0 && (
+          <ul>
+            {suggestions.map(suggestion => (
+              <li key={suggestion.id} onClick={() => handleSelect(suggestion.id)}>
+                {suggestion.id}
+              </li>
+            ))}
+          </ul>
+        )}
       </center>
     </div>
   );
