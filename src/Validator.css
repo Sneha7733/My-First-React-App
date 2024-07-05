@@ -39,31 +39,5 @@
   .validator button:hover {
     background-color: #0056b3;
   }
-  
-  .validator ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .validator ul li {
-    margin-bottom: 5px;
-    cursor: pointer;
-  }
-  
-  .validator ul li:hover {
-    text-decoration: underline;
-  }
-  
-  /* Adjustments for smaller screens */
-  @media (max-width: 768px) {
-    .validator {
-      padding: 10px;
-      max-width: 100%; /* Ensure full width on smaller screens */
-      left: 0;
-    }
-  
-    .validator h2 {
-      margin-top: 50px; /* Adjust top margin for smaller screens */
-    }
-  }
+
   
