@@ -33,14 +33,3 @@
     border-bottom: 1px solid #ccc;
   }
   
-  /* Adjustments for smaller screens */
-  @media (max-width: 768px) {
-    .sidebar {
-      position: static;
-      width: auto;
-      height: auto;
-      grid-row: 2 / 3;
-      border-right: none;
-    }
-  }
-  
