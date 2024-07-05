@@ -1,57 +1,69 @@
 .validator {
   background: linear-gradient(to bottom, #d2dad9, #9ed0d0);
   margin: 0;
-  padding: 20px;
-  position: fixed;
-  top: 70px; 
-  left: 250px;  
-  right: 0;
-  bottom: 0;
-  height: calc(100vh - 70px);
-}
-
-.validator h2 {
-  margin-top: 150px;
-  text-decoration: underline;
-  color: darkmagenta;
-}
-
-.validator p {
-  margin-top: 30px;
-}
-
-.validator form {
-  margin-top: 20px;
-}
-
-.validator input {
-  padding: 5px 10px;
-  margin-right: 10px;
-}
-
-.validator button {
-  padding: 5px 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-.validator button:hover {
-  background-color: #0056b3;
-}
-
-.validator ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.validator ul li {
-  margin-bottom: 5px;
-  cursor: pointer;
-}
-
-.validator ul li:hover {
-  text-decoration: underline;
-}
-
+    padding: 20px;
+    position: fixed;
+    top: 70px; 
+    left: 250px;  
+    right: 0;
+    bottom: 0;
+    height: calc(100vh - 70px);
+  }
+  
+  .validator h2 {
+    margin-top: 150px;
+    color: green;
+  }
+  
+  .validator p {
+    margin-top: 20px;
+  }
+  
+  .validator form {
+    margin-top: 20px;
+  }
+  
+  .validator input {
+    padding: 5px 10px;
+    margin-right: 10px;
+  }
+  
+  .validator button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .validator button:hover {
+    background-color: #0056b3;
+  }
+  
+  .validator ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .validator ul li {
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  .validator ul li:hover {
+    text-decoration: underline;
+  }
+  
+  /* Adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .validator {
+      padding: 10px;
+      max-width: 100%; /* Ensure full width on smaller screens */
+      left: 0;
+    }
+  
+    .validator h2 {
+      margin-top: 50px; /* Adjust top margin for smaller screens */
+    }
+  }
+  
