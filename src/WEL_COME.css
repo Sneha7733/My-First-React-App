@@ -28,20 +28,5 @@
     margin-top: 20px;
   }
   
-  /* Adjustments for smaller screens */
-  @media (max-width: 768px) {
-    .welcome {
-      left: 0;
-      padding: 10px;
-      height: calc(100vh - 70px); 
-    }
-  
-    .welcome h1 {
-      margin-top: 50px;
-    }
-  
-    .welcome p {
-      margin-top: 20px; 
-  }
-  }
+
   
