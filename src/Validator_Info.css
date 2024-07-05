@@ -12,19 +12,19 @@
 
 .validator-info h1 {
   color: white;
-  margin-top: 5px;
+  margin-top: -8px;
   margin-bottom: 10px;
   text-align: center;
 }
 
 .validator-info h2 {
   color: white;
-  margin-top: 10px;
+  margin-top: -10px;
   margin-bottom: 10px;
 }
 
 .validator-info p {
-  margin-top: 10px;
+  margin-top: -10px;
   color: white;
 
 }
@@ -86,4 +86,15 @@
   background-color: #b6f1ea;
 }
 
-
+@media (max-width: 768px) {
+  .validator-info {
+    margin-left: 0;
+    width: 100%;
+  }
+  .stats-box {
+    flex-direction: column;
+  }
+  .list {
+    width: 100%;
+  }
+}
