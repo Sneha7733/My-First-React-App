@@ -13,7 +13,7 @@ function Validator() {
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    const value = e.target.value.trim(); // Trim whitespace
+    const value = e.target.value.trim();
 
     // Validate input format: only numbers and alphanumeric characters
     if (/^[0-9a-zA-Z]*$/.test(value) || value === '') {
@@ -74,7 +74,6 @@ function Validator() {
           <button type="submit">Search</button>
         </form>
         {error && <p style={{ color: 'red' }}>{error}</p>}
-        {loading && <p>Loading...</p>}
         {suggestions.length > 0 && (
           <ul>
             {suggestions.map(suggestion => (
