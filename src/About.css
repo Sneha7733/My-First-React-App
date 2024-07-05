@@ -13,12 +13,34 @@
   
   .about h1 {
     margin-top: 20px;
-    color: brown;
-    text-decoration: underline;
+    color: green;
   }
   
+    
+  .about h2 {
+    margin-top: 20px;
+    color: green;
+  }
+
   .about p {
     margin-top: 20px;
-    color: rgb(122, 18, 225);
+    color: black(203, 47, 52);
   }
- 
+  
+  /* Adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .about {
+      left: 0;
+      padding: 10px;
+      height: calc(100vh - 70px);
+    }
+  
+    .about h1 {
+      margin-top: 50px;
+    }
+  
+    .about p {
+      margin-top: 20px;
+    }
+  }
+  
