@@ -18,14 +18,14 @@
 }
 
 .validator-info h2 {
-  color: white;
+  color: antiquewhite;
   margin-top: -10px;
   margin-bottom: 10px;
 }
 
 .validator-info p {
   margin-top: -10px;
-  color: white;
+  color: black;
 
 }
 
@@ -85,4 +85,3 @@
 .attestations-table-container td {
   background-color: #b6f1ea;
 }
-
