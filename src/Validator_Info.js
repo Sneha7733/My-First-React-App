@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { API_URL } from './beaconchaAPI';
-import './Validator_Info.css';
+import './ValidatorInfo.css';
 
 const Validator_Info = () => {
   const { id } = useParams();
