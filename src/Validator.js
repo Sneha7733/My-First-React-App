@@ -7,36 +7,32 @@ import './Validator.css';
 function Validator() {
   const [input, setInput] = useState('');
   const [suggestions, setSuggestions] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
   const navigate = useNavigate();
 
   const handleChange = (e) => {
     const value = e.target.value.trim();
+    setError('');
 
-    // Validate input format: only numbers and alphanumeric characters
-    if (/^[0-9a-zA-Z]*$/.test(value) || value === '') {
+    if (/^[0-9]*$/.test(value) || value === '') {
       setInput(value);
 
       if (value.length > 2) {
-        setLoading(true);
         axios.get(`${API_URL}/search/indexed_validators/${encodeURIComponent(value)}`)
           .then(response => {
             if (response.data.data.length === 0) {
-              setError('No results found. Please enter a valid ID or pubkey.');
+              setError('No results found. Please enter a valid Validator ID.');
               setSuggestions([]);
             } else {
               setError('');
               setSuggestions(response.data.data);
             }
-            setLoading(false);
           })
           .catch(error => {
             console.error('Error fetching suggestions:', error);
             setError('');
             setSuggestions([]);
-            setLoading(false);
           });
       } else {
         setSuggestions([]);
@@ -45,7 +41,7 @@ function Validator() {
     } else {
       setInput(value);
       setSuggestions([]);
-      setError('Invalid input format. Please enter only numbers and alphanumeric characters.');
+      setError('Invalid input format. Please enter only numbers.');
     }
   };
 
@@ -57,10 +53,10 @@ function Validator() {
     e.preventDefault();
     const trimmedInput = input.trim();
 
-    if (trimmedInput && /^[0-9a-zA-Z]+$/.test(trimmedInput)) {
+    if (/^[0-9]+$/.test(trimmedInput)) {
       navigate(`/validator/${encodeURIComponent(trimmedInput)}`);
     } else {
-      setError('Invalid input format. Please enter only numbers and alphanumeric characters.');
+      setError('Invalid input format. Please enter only numbers.');
     }
   };
 
@@ -68,7 +64,7 @@ function Validator() {
     <div className="validator">
       <center>
         <h2>Validator Search</h2>
-        <p>Enter a Validator ID or Pubkey:</p>
+        <p>Enter a Validator ID:</p>
         <form onSubmit={handleSubmit}>
           <input type="text" value={input} onChange={handleChange} />
           <button type="submit">Search</button>
