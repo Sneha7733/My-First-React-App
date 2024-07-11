@@ -1,14 +1,16 @@
 .sidebar {
-    grid-row: 2 / 3; 
-    position: fixed;
-    left: 0;
-    top: 100px;
-    width: 200px;
-    height: calc(100vh - 70px);
-    border-right: 1px solid #ccc;
-    padding: 40px;
-    z-index: 90;
-  }
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  position: fixed;
+  top: 85px;
+  left: 0;
+  width: 200px;
+  height: calc(100vh - 150px);
+  background: linear-gradient(to bottom, #6ACFC7, #062f2f);
+  border-right: 1px solid #ccc;
+  padding: 40px;
+  z-index: 90;
+}
   
   .sidebar h2 {
     color: white;
